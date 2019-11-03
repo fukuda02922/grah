@@ -1,0 +1,366 @@
+/* テンプレート */
+html, body {
+    background-color: #ededed;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: MS;
+}
+
+#container {
+    margin-top: 60px;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(218, 206, 196);
+    height: 60px;
+}
+
+.sidemenu {
+    position: fixed;
+    top: 60px;
+    height: 100%;
+    padding-top: 44px;
+    background-image: url("../image/brown0018.png");
+}
+
+.side {
+    margin: 0px;
+    width: 100%;
+    padding: 15px;
+    border: transparent;
+    font-weight: bold;
+    color: white;
+}
+
+.side:hover {
+    background-color: #ededed;
+    color: #bd6b6d;
+    cursor: pointer;
+}
+
+.content {
+    position: relative;
+    top: 60px;
+    left: 203px;
+    margin-right: 205px;
+}
+
+.flash_message {
+    text-align: center;
+    padding: 5px;
+    color: green;
+    background: lavender;
+}
+
+.img-profile {
+    top: 15px;
+    width: 40px;
+    height: 40px;
+
+}
+
+.absolute {
+    position: absolute;
+}
+
+.telop {
+    font-size: 20px;
+    font-weight: bold;
+    color: #010001;
+    border: 1px solid #c6c8ca;
+    background-color: #ffffff;
+    width: 100%;
+    margin-left: 5px;
+
+}
+
+/* index */
+
+.comment {
+    border: 1px solid #343a40;
+    padding: 3px;
+    background-color: #5e5e5e;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.delete {
+    width: 70px;
+    height: 20px;
+}
+
+.blog {
+    border: transparent;
+    border-radius: 10px;
+    width: 170px;
+    height: 60px;
+    padding: 5px;
+}
+
+h2 {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.44);
+    padding-bottom: 5px;
+}
+
+img {
+    cursor: pointer;
+}
+
+ul > li {
+    padding: 3px 0;
+}
+
+.fs12 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+input[type=text] {
+    width: 200px;
+    padding: 5px;
+}
+
+textarea {
+    padding: 5px;
+    width: 350px;
+    height: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    font-size: 10px;
+
+}
+
+div.drag-drop-buttons {
+    width: 30px;
+    height: 10px;
+}
+
+.lb {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .7);
+    opacity: 0;
+    transition: .3s opacity ease;
+    z-index: -1;
+}
+
+.lb img {
+    width: auto !important;
+    max-height: 100% !important;
+    transform: scale(.7);
+    transition: .4s transform ease;
+    pointer-events: none;
+}
+
+.lb:target {
+    opacity: 1;
+    z-index: 103;
+}
+
+.lb:target img {
+    transform: scale(1);
+}
+
+/* なんちゃって閉じるボタン（いらない場合は消す） */
+.lb::before, .lb::after {
+    display: block;
+    position: fixed;
+    content: "";
+    width: 24px;
+    height: 3px;
+    top: 24px;
+    right: 12px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.lb::before {
+    transform: rotate(-315deg);
+}
+
+.lb::after {
+    transform: rotate(315deg);
+}
+
+.baloon6 {
+    height: auto;
+    margin: 10px 0;
+    overflow: hidden;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.baloon6 .faceicon {
+    float: left;
+    margin-right: -50px;
+    width: 40px;
+}
+
+.says {
+    height: auto;
+    width: 100%;
+    color: #2a2a2a;
+    text-align: left;
+    -ms-transform: translate(50px, 0px);
+    -webkit-transform: translate(50px, 0px);
+    transform: translate(50px, 0px);
+}
+
+.says:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: -19px;
+    border: 8px solid transparent;
+    border-right: 18px solid #eef2f4;
+    -ms-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+}
+
+.says p {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0;
+    padding: 8px;
+    max-width: 300px;
+    border-radius: 12px;
+    background: #eef2f4;
+
+}
+
+.mycomment p {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0;
+    padding: 8px;
+    max-width: 300px;
+    border-radius: 12px;
+    background: #30e852;
+    transition: 0.3s;
+}
+
+.mycomment {
+    width: 100%;
+    color: #2a2a2a;
+    text-align: right;
+    -ms-transform: translate(-20px, 0px);
+    -webkit-transform: translate(-20px, 0px);
+    transform: translate(-20px, 0px);
+}
+
+.mycomment p:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -19px;
+    border: 8px solid transparent;
+    border-left: 18px solid #30e852;
+    -ms-transform: rotate(-35deg);
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+}
+
+.mycomment p:hover {
+    opacity: 0.5;
+    cursor: pointer;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 50, .5);
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .3);
+}
+
+#drag-drop-area {
+    background-color: #f4f4f4;
+    margin: 10px;
+    padding: 10px;
+    border: #ddd dashed 5px;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    color: #1d2124;
+    position: relative;
+    border-radius: 50px;
+    max-width: 30%;
+    overflow: hidden;
+}
+
+#imagebox img {
+    width: auto;
+    height: 200px;
+}
+
+.profile:after {
+    content: "";
+    border: 50px solid transparent;
+    border-right: 100px solid #cccccc;
+    border-radius: 50px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: absolute;
+    left: -75px;
+    top: -30px;
+}
+
+#password:after {
+    content: "";
+    border: 10px solid;
+}
+
+.common {
+    color: black;
+    border: 1px solid #b2b4b6;
+    border-radius: 7px;
+    padding: 20px 10px;
+    background-color: white;
+    margin: 5px 5px 15px;
+}
+
+.search input[type=text] {
+    border: 1px solid rgba(40, 40, 40, 0.74);
+    border-radius: 5px;
+}
+
+.search input[type=submit] {
+    border: transparent;
+    border-radius: 4px;
+    width: 80px;
+    height: 35px;
+    background-color: #af4e00;
+    color: white;
+    font-weight: bold;
+}
